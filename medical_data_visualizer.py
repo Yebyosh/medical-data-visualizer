@@ -33,9 +33,8 @@ def draw_cat_plot():
 
     # 7 Convert the data into long format and create a chart that shows the value counts of the categorical features using the following method provided by the seaborn library import : sns.catplot()
 
-
     # 8 Get the figure for the output and store it in the fig variable
-    fig = sns.catplot(data=tmp_cat, x='variable', y='total', hue='value', col='cardio', kind='bar', order=['active', 'alco', 'cholesterol', 'gluc', 'overweight', 'smoke'])
+    fig = sns.catplot(data=tmp_cat, x='variable', y='total', hue='value', col='cardio', kind='bar', order=['active', 'alco', 'cholesterol', 'gluc', 'overweight', 'smoke']).figure
 
     # 9 Do not modify the next two lines
     fig.savefig('catplot.png')
