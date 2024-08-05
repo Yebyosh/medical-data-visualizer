@@ -67,10 +67,10 @@ def draw_heat_map():
     #print(mask)
 
     # 14 Set up the matplotlib figure
-    fig = sns.heatmap(corr, annot=True, fmt='.1f', linewidth=.5, mask=mask)
-
+    fig, ax = plt.subplots(1)
+    
     # 15 Plot the correlation matrix using the method provided by the seaborn library import: sns.heatmap()
-    plt.show()
+    sns.heatmap(corr, annot=True, fmt='.1f', linewidth=.5, mask=mask)
 
     # 16 Do not modify the next two lines
     fig.savefig('heatmap.png')
